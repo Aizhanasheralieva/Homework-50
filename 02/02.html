@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/babel">
+    const Header = () => {
+        return (
+            <header className="header-info" >
+                <img className="header-img" src="https://learnenglish.britishcouncil.org/sites/podcasts/themes/bc_ui/logo.svg" alt="British Council Learn English"/>
+                <div className="login-info">
+                    <input className="header-input" placeholder="Search for"/>
+                    <a className="login-link">Log in</a>
+                    <a className="register-link">Register</a>
+                </div>
+
+            </header>
+        );
+    };
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<div><Header/></div>);
+</script>
+
+</body>
+</html>
