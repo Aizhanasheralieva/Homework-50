@@ -15,9 +15,11 @@
     const Header = () => {
         return (
             <header className="header-info">
-                <img className="header-img" src="https://learnenglish.britishcouncil.org/sites/podcasts/themes/bc_ui/logo.svg" alt="British Council Learn English" />
+                <a className="header-img"><img
+                        src="https://learnenglish.britishcouncil.org/sites/podcasts/themes/bc_ui/logo.svg"
+                        alt="British Council Learn English"/></a>
                 <div className="login-info">
-                    <input className="header-input" placeholder="Search for" />
+                    <input className="header-input" placeholder="Search for"/>
                     <a className="login-link">Log in</a>
                     <a className="register-link">Register</a>
                 </div>
@@ -30,14 +32,18 @@
             <aside className="sidebar">
                 <nav>
                     <ul className="main-nav-list">
-                        <li className="main-nav-item"><a href="#" className="main-nav-link">Home</a></li>
+                        <strong>
+                            <li className="main-nav-item"><a href="#" className="main-nav-link">Home</a></li>
+                        </strong>
                         <li className="main-nav-item"><a href="#" className="main-nav-link">Online courses</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">Learning hub</a></li>
                         <li className="main-nav-item"><a href="#" className="main-nav-link">Skills</a></li>
                         <li className="main-nav-item"><a href="#" className="main-nav-link">Grammar</a></li>
                         <li className="main-nav-item"><a href="#" className="main-nav-link">Vocabulary</a></li>
                         <li className="main-nav-item"><a href="#" className="main-nav-link">Business English</a></li>
                         <li className="main-nav-item"><a href="#" className="main-nav-link">General English</a></li>
-                        <li className="main-nav-item"><a href="#" className="main-nav-link">English for Career Development</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">English for Career
+                            Development</a></li>
                         <li className="main-nav-item"><a href="#" className="main-nav-link">English levels</a></li>
                     </ul>
                 </nav>
@@ -45,6 +51,7 @@
                     <h2 className="title">Learn English online and improve your skills through our high-quality courses and resources.</h2>
                     <p className="text">Everything you find here has been specially created by the British Council, the world's English teaching experts.</p>
                     <h2 className="title">We provide you with the right tools to help you interact confidently in the real world.</h2>
+                    <img className="img-skills"  src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/1280x500/public/2023-04/RS9260_GettyImages-1324510963_1440x960.jpg?itok=BRnKD4Xz" alt="Skills"/>
                 </div>
             </aside>
         );
@@ -74,7 +81,7 @@
                              alt="Skills"/>
                     </div>
                 </div>
-                <div className="contentTwo">
+                <div className="content">
                     <div>
                         <img className="img-skills"
                              src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/630x680/public/2023-04/RS8037_GettyImages-985388610_square.jpg?itok=IhmUSJuJ"
@@ -113,7 +120,32 @@
         );
     };
 
-    ReactDOM.createRoot(document.getElementById('app')).render(<div><Header/><Sidebar/><Content/></div>);
+    const Footer = () => {
+        return (
+            <footer className="footer-info">
+                <div className="details" >
+                    <a><img className="header-img"
+                            src="https://learnenglish.britishcouncil.org/sites/podcasts/themes/bc_ui/logo.svg"
+                            alt="British Council Learn English"/></a>
+                    <a><strong>About us</strong></a>
+                    <a><strong>Terms uf use</strong></a>
+                    <a><strong>Accessibility</strong></a>
+                    <a><strong>Privacy and cookies</strong></a>
+                    <a><strong>Affiliate programme</strong></a>
+                    <a><strong>Getting started</strong></a>
+                    <a><strong>Frequently asked questions</strong></a>
+                    <a><strong>Contact us</strong></a>
+                    <a><strong>Site map</strong></a>
+                </div>
+                <p className="copyright">© British Council
+                    The United Kingdom's international organisation for cultural relations and educational
+                    opportunities.
+                    A registered charity: 209131 (England and Wales) SC037733 (Scotland).</p>
+            </footer>
+        );
+    };
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<div><Header/><Sidebar/><Content/><Footer/></div>);
 </script>
 
 </body>

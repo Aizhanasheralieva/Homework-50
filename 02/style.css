@@ -20,6 +20,8 @@ body {
 
 .header-img {
     width: 150px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .login-info {
@@ -143,4 +145,17 @@ body {
     width: 100%;
     border-radius: 6px;
     margin-bottom: 30px;
+}
+
+.footer-info {
+    padding: 20px 35px;
+    background: #3cb73c;
+    color: white;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
 }
