@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="app"></div>
+<script type="text/babel">
+    const ReallyFascinatingFilms = ({filmImage, filmTitle, yearOfFilmRelease}) => {
+        return (
+            <a className="filmCard">
+                <img className="film-img" src={filmImage} alt={filmTitle}/>
+                <h1 className="film-title">{filmTitle}</h1>
+                <p className="release-year">Released in: {yearOfFilmRelease}</p>
+            </a>
+        );
+    };
+
+    const FilmCards = () => (
+        <div>
+            <ReallyFascinatingFilms filmImage="https://upload.wikimedia.org/wikipedia/en/5/59/Movie_poster_king_arthur.jpg" filmTitle="King Arthur" yearOfFilmrelease="2004"/>
+            <ReallyFascinatingFilms filmImage="https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png" filmTitle="Gladiator" yearOfFilmRelease="2000"/>
+            <ReallyFascinatingFilms filmImage="https://upload.wikimedia.org/wikipedia/commons/a/a4/Dramatic_Life_of_Abraham_Lincoln_poster.jpg" filmTitle="Abraham Lincoln" yearOfFilmRelease="1924"/>
+        </div>
+    );
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<FilmCards/>);
+</script>
+
+
+</body>
+</html>
