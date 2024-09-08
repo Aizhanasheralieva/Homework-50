@@ -14,14 +14,13 @@
 <script type="text/babel">
     const Header = () => {
         return (
-            <header className="header-info" >
-                <img className="header-img" src="https://learnenglish.britishcouncil.org/sites/podcasts/themes/bc_ui/logo.svg" alt="British Council Learn English"/>
+            <header className="header-info">
+                <img className="header-img" src="https://learnenglish.britishcouncil.org/sites/podcasts/themes/bc_ui/logo.svg" alt="British Council Learn English" />
                 <div className="login-info">
-                    <input className="header-input" placeholder="Search for"/>
+                    <input className="header-input" placeholder="Search for" />
                     <a className="login-link">Log in</a>
                     <a className="register-link">Register</a>
                 </div>
-
             </header>
         );
     };
@@ -42,17 +41,79 @@
                         <li className="main-nav-item"><a href="#" className="main-nav-link">English levels</a></li>
                     </ul>
                 </nav>
-                <div>
+                <div className="main-info">
                     <h2 className="title">Learn English online and improve your skills through our high-quality courses and resources.</h2>
                     <p className="text">Everything you find here has been specially created by the British Council, the world's English teaching experts.</p>
                     <h2 className="title">We provide you with the right tools to help you interact confidently in the real world.</h2>
                 </div>
-
             </aside>
         );
     };
 
-    ReactDOM.createRoot(document.getElementById('app')).render(<div><Header/><Sidebar/></div>);
+    const Content = () => {
+        return (
+            <main className="container">
+                <div className="content">
+                    <div>
+                        <h4 className="title">Skills</h4>
+                        <p className="text">Practise your listening, reading, writing and speaking and learn useful
+                            language to use at work or to communicate effectively with friends.</p>
+                        <ul>
+                            <li className="some-text">Audio and video to practise your listening and speaking skills.
+                            </li>
+                            <li className="some-text">Model texts for all types of writing tasks.</li>
+                            <li className="some-text">Work on your reading skills to read more quickly and understand
+                                more.
+                            </li>
+                        </ul>
+                        <button className="btn" type="button">Start learning</button>
+                    </div>
+                    <div>
+                        <img className="img-skills"
+                             src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/630x680/public/2023-04/RS9171_GettyImages-1391836113_1440x960_0.jpg?itok=5DFIIUea"
+                             alt="Skills"/>
+                    </div>
+                </div>
+                <div className="contentTwo">
+                    <div>
+                        <img className="img-skills"
+                             src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/630x680/public/2023-04/RS8037_GettyImages-985388610_square.jpg?itok=IhmUSJuJ"
+                             alt="Grammar"/>
+                    </div>
+                    <div>
+                        <h4 className="title">Grammar</h4>
+                        <p className="text">Practise your grammar skills with exercises and tips for improving accuracy
+                            in communication.</p>
+                        <ul>
+                            <li className="some-text">Interactive grammar lessons and practice.</li>
+                            <li className="some-text">Grammar tips for effective writing and speaking.</li>
+                        </ul>
+                        <button className="btn" type="button">Start learning</button>
+                    </div>
+                </div>
+
+                <div className="content">
+                    <div>
+                        <h4 className="title">Vocabulary</h4>
+                        <p className="text">Learn new words and improve your language level to be able to communicate in English effectively.</p>
+                        <ul>
+                            <li className="some-text">Online exercises to help you learn the meaning, pronunciation and spelling of new words.</li>
+                            <li className="some-text">Learn new words connected to a wide range of different topics.</li>
+                            <li className="some-text">Play our word games and have fun as you improve your vocabulary.</li>
+                        </ul>
+                        <button className="btn" type="button">Start learning</button>
+                    </div>
+                    <div>
+                        <img className="img-skills"
+                             src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/630x680/public/2023-04/RS9171_GettyImages-1391836113_1440x960_0.jpg?itok=5DFIIUea"
+                             alt="Skills"/>
+                    </div>
+                </div>
+            </main>
+        );
+    };
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<div><Header/><Sidebar/><Content/></div>);
 </script>
 
 </body>
