@@ -26,7 +26,33 @@
         );
     };
 
-    ReactDOM.createRoot(document.getElementById('app')).render(<div><Header/></div>);
+    const Sidebar = () => {
+        return (
+            <aside className="sidebar">
+                <nav>
+                    <ul className="main-nav-list">
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">Home</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">Online courses</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">Skills</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">Grammar</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">Vocabulary</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">Business English</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">General English</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">English for Career Development</a></li>
+                        <li className="main-nav-item"><a href="#" className="main-nav-link">English levels</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <h2 className="title">Learn English online and improve your skills through our high-quality courses and resources.</h2>
+                    <p className="text">Everything you find here has been specially created by the British Council, the world's English teaching experts.</p>
+                    <h2 className="title">We provide you with the right tools to help you interact confidently in the real world.</h2>
+                </div>
+
+            </aside>
+        );
+    };
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<div><Header/><Sidebar/></div>);
 </script>
 
 </body>
